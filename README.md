@@ -15,10 +15,11 @@ Quick sketch of how I imagine this working, each challenge dir will have two fil
 Recommended Vagrant plugins:
 - https://github.com/dotless-de/vagrant-vbguest
 
-TODO:
-Include qemu as a provider (requires plugins and extra configs) 
-Run script to log all terminal usage (archive of how you beat a challenge) and sync to /vagrant for safe-keeping
-Connect to a SCOREBOARD service?
-Turn into a service where you can request a new challenge from a repository, anytime you're in the mood. pwnd? (pwn daemon)
+##TODO:
+- Convert to a vagrant plugin (maybe vagrant-ctf?)
+- Include qemu as a provider (requires plugins and extra configs) 
+- Run script to log all terminal usage (archive of how you beat a challenge) and sync to /vagrant for safe-keeping
+- Connect to a SCOREBOARD service?
+- Turn into a service where you can request a new challenge from a repository, anytime you're in the mood. pwnd? (pwn daemon)
 
 Ideas welcome: q@crypto.com
