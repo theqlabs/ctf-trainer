@@ -1,0 +1,9 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/precise32"
+  config.vm.provision :shell, path: "bootstrap.sh"
+	config.vm.post_up_message = "Welcome to DEFCON 19 Binary 100 Challenge!"
+end
+

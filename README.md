@@ -1,16 +1,24 @@
 # ctf-trainer
-Bootstrap CTF Environments in Vagrant!
+Bootstrap CTF Environments using Vagrant!
 
-Quick sketch of how I imagine this working:
+- install vagrant and virtualbox
+- pick a challenge
+- vagrant up && vagrant ssh
+- have fun!
+- when you're done, run: cleanup.sh and move to the next challenge 
 
-As a prototype I want to write a few Vagrantfile's defining what each challenge requires, when you run 'vagrant up' on that file the OS version, Software and CTF binary service should be running for you. I'm going to do a few of these and see if they're useful at all. Build from there.
+Quick sketch of how I imagine this working, each challenge dir will have two files:
+- Vagrantfile will define OS, Networking
+- bootstrap.sh will pull down all necessary software and configure environment
+- cleanup.sh halts, destroys and removes any files left over from Vagrant
 
-Future: 
-Run script to log all terminal usage (learn from users)
+Recommended Vagrant plugins:
+- https://github.com/dotless-de/vagrant-vbguest
+
+TODO:
+Include qemu as a provider (requires plugins and extra configs) 
+Run script to log all terminal usage (archive of how you beat a challenge) and sync to /vagrant for safe-keeping
 Connect to a SCOREBOARD service?
-Turn into a service where you can request a new challenge from a repository, anytime you're in the mood to pwn.
+Turn into a service where you can request a new challenge from a repository, anytime you're in the mood. pwnd? (pwn daemon)
 
 Ideas welcome: q@crypto.com
-
-Resources:
-Pulling a lot of binaries from Jonathan Salwan's awesome repo here: http://shell-storm.org/repo - much kudos to him. Beers on me if we ever meet.
